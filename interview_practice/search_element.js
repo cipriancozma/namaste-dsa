@@ -1,7 +1,7 @@
 const arr = [4, 2, 0, 10, 8, 30];
 
 const searchElement = (arr, elem) => {
-    for(let i = 0; i <= arr.length; i++) {
+    for(let i = 0; i < arr.length; i++) {
         if(arr[i] == elem) {
             return i;
         }
