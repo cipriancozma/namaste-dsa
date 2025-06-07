@@ -1,13 +1,17 @@
 let arr = [5, 0, 10, 8, 17, 1, 23];
 
 const secondLargestNum = (arr) => {
+    if(arr.length < 2) {
+        return null;
+    }
+
     let firstLargest = -Infinity;
     let secondLargest = -Infinity;
     for(let i = 0; i < arr.length; i++) {
         if(arr[i] > firstLargest) {
             secondLargest = firstLargest;
             firstLargest = arr[i];
-        } else if (arr[i] > secondLargest) {
+        } else if (arr[i] > secondLargest && arr[i] !== firstLargest) {
             secondLargest = arr[i];
         }
     }
